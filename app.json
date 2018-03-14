@@ -3,7 +3,6 @@
     "pages/login/wxVerify/wxVerify",
     "pages/njf/njf",
     "pages/other/merchant/shop/shop",
-    "pages/logs/logs",
     "pages/myCart/myCart",
     "pages/my/my",
     "pages/other/search/search",
@@ -16,7 +15,6 @@
     "pages/other/address/addsite/addsite",
     "pages/other/order/order",
     "pages/login/WxAccredit/WxAccredit",
-    "pages/login/wxLogin/wxLogin",
     "pages/other/dingChuang/dingChuang",
     "pages/other/guideApp/guideApp"
   ],
