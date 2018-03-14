@@ -1,0 +1,29 @@
+<!--pages/other/guideApp/guideApp.wxml-->
+
+<view class='box'>
+
+    <view class='njf-box'>
+        <image src='../../../style/img/njflogo.png'></image>
+        <text class='app-name'>农卷风</text>
+        <text class='com-name'>看得见的农业，让您吃得更放心</text>
+    </view>
+    <view class='njf-download'>
+        <text class='more'>更多操作请下载app</text>
+        <view class='njf-download-url'>
+            <text>app下载地址:</text>
+            <text class='copy' bindtap='copy'>复制</text>
+            <input value='{{url}}'></input>
+        </view>
+        <!-- <button class='btn bg-1'>复制去浏览器粘贴</button> -->
+    </view>
+    <view class='footer'>
+    深圳艺购科技有限公司
+    </view>
+    
+</view>
+<!-- <view class='video-view'>
+<video danmu-btn="{{true}}" class='video-item' 
+objectFit="fill" autoplay='{{true}}' loop='{{true}}' 
+controls="{{flase}}" src='http://app.njf2016.com/njf/resource/2017/11/28/3310628f-7.mp4'>
+</video>
+</view> -->

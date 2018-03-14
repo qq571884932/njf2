@@ -1,0 +1,164 @@
+<!--pages/other/merchant/shop/shop.wxml-->
+<view class='content'>
+<scroll-view bindscroll="scroll" style="height:100vh"  scroll-y bindscrolltolower="lower" class='scroll-box' scroll-into-view="content2">
+    <view class='shop-box'>
+        <view class='shop-bor'>
+            <view class='shop-img'>
+                <image src='http://image.benlailife.com//ProductImages/000/000/352/206/medium/ed7ff05b-6450-4778-8c8f-ae8e29a7681a.jpg?imageView2/2/format/webp'></image>
+            </view>
+            <view class='shop-info'>
+                <view class='shop-name'>
+                    <text class='shop-slef'>自营</text> 农卷风自营店啦啦啦
+                </view>
+                <text class='announcement'>公告：今天全场免费，全部免费哦！</text>
+                <view class='authentication'>
+
+                    <view class='authentication-item'>
+                        <text class='authentication-text'>实</text>
+                        <text class='iconfont icon-xingxing'></text>
+
+                    </view>
+                    <view class='authentication-item'>
+                        <text class='authentication-text'>征</text>
+                        <text class='iconfont icon-xingxing'></text>
+                    </view>
+                    <view class='authentication-item'>
+                        <text class='authentication-text'>盯</text>
+                        <text class='iconfont icon-xingxing'></text>
+                    </view>
+
+                </view>
+            </view>
+            <view class='other' bindtap='toApp'>
+                <text class='iconfont icon-msnui-sms-bubble'></text>
+            </view>
+        </view>
+        <!-- <text class='announcement'>公告：今天全场免费，全部免费哦！</text> -->
+    </view>
+    <view class='shop-content'>
+        <include src="../../../component/searchBar.wxml" />
+        <include src="../../../component/sort.wxml" />
+    </view>
+
+
+    <view class='goods-list2'>
+        <view class='goods-item2'>
+            <view class='img-top'>
+                <image src='http://image6.benlailife.com//ProductImages/000/000/356/074/big/365779e8-44e5-44cd-b724-57b4cfd1cb5e.jpg'></image>
+            </view>
+            <view class='goods-introduce'>
+                <view class='goods-name'>
+                    <text class='self'>自营</text> 蓝塘土猪土猪土猪土猪土猪猪土猪土猪土猪土猪猪土猪猪土猪土猪土猪土猪
+                </view>
+                <view class='mode-address'>
+                    <view class='mode-box'>
+                        <text class='mode'>现售</text>
+                        <text class='mode'>预售</text>
+                        <text class='mode'>团购</text>
+                    </view>
+                    <text class='address'>河源</text>
+                </view>
+                <view class='price-sales'>
+                    <text class='price-sgin'>￥</text>
+                    <text class='price'>199</text>
+                    <text class='sales'>100人付款</text>
+                    <view class='shop' bindtap='toShop'>
+                        <text class='iconfont icon-dianpu'></text>
+                    </view>
+
+                </view>
+            </view>
+        </view>
+
+
+        <view class='goods-item2'>
+            <view class='img-top'>
+                <image src='http://image7.benlailife.com/ProductImages/000/000/288/195/big/39b15072-0dc6-4a4f-98b1-eaa3057b7ce9.jpg'></image>
+            </view>
+            <view class='goods-introduce'>
+                <view class='goods-name'>
+                    <text class='self'>自营</text> 蓝塘土猪土猪土猪土猪土猪猪土猪土猪土猪土猪猪土猪猪土猪土猪土猪土猪
+                </view>
+                <view class='mode-address'>
+                    <view class='mode-box'>
+                        <text class='mode'>现售</text>
+                        <text class='mode'>预售</text>
+                        <text class='mode'>团购</text>
+                    </view>
+                    <text class='address'>河源</text>
+                </view>
+                <view class='price-sales'>
+                    <text class='price-sgin'>￥</text>
+                    <text class='price'>199</text>
+                    <text class='sales'>100人付款</text>
+                    <view class='shop'>
+                        <text class='iconfont icon-dianpu'></text>
+                    </view>
+
+                </view>
+            </view>
+        </view>
+
+
+        <view class='goods-item2'>
+            <view class='img-top'>
+                <image src='http://image7.benlailife.com/ProductImages/000/000/288/195/big/39b15072-0dc6-4a4f-98b1-eaa3057b7ce9.jpg'></image>
+            </view>
+            <view class='goods-introduce'>
+                <view class='goods-name'>
+                    <text class='self'>自营</text> 猪土猪土猪土猪
+                </view>
+                <view class='mode-address'>
+                    <view class='mode-box'>
+                        <text class='mode'>现售</text>
+                        <text class='mode'>预售</text>
+                        <text class='mode'>团购</text>
+                    </view>
+                    <text class='address'>河源</text>
+                </view>
+                <view class='price-sales'>
+                    <text class='price-sgin'>￥</text>
+                    <text class='price'>199</text>
+                    <text class='sales'>100人付款</text>
+                    <view class='shop'>
+                        <text class='iconfont icon-dianpu'></text>
+                    </view>
+
+                </view>
+            </view>
+        </view>
+
+        <view class='goods-item2'>
+            <view class='img-top'>
+                <image src='http://image7.benlailife.com/ProductImages/000/000/288/195/big/39b15072-0dc6-4a4f-98b1-eaa3057b7ce9.jpg'></image>
+            </view>
+            <view class='goods-introduce'>
+                <view class='goods-name'>
+                    <text class='self'>自营</text> 蓝塘土猪土猪土猪土猪土猪猪土猪土猪土猪土猪猪土猪猪土猪土猪土猪土猪
+                </view>
+                <view class='mode-address'>
+                    <view class='mode-box'>
+                        <text class='mode'>现售</text>
+                        <text class='mode'>预售</text>
+                        <text class='mode'>团购</text>
+                    </view>
+                    <text class='address'>河源</text>
+                </view>
+                <view class='price-sales'>
+                    <text class='price-sgin'>￥</text>
+                    <text class='price'>199</text>
+                    <text class='sales'>100人付款</text>
+                    <view class='shop'>
+                        <text class='iconfont icon-dianpu'></text>
+                    </view>
+
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--底部加载-->
+            <include src="/pages/component/footLoading.wxml"/>
+            <!--底部加载结束-->
+</scroll-view>
+</view>

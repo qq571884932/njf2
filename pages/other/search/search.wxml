@@ -1,0 +1,103 @@
+<!--pages/other/search/search.wxml-->
+<view class='content'>
+    
+    <view class='info'>
+        <!--历史记录开始-->
+        <view class='history-block {{searchList==null?"show":"hide"}}'>
+            <view class='title'>
+                <text>历史搜索</text>
+                <text class='iconfont icon-lajitong'></text>
+            </view>
+            <view class='search-sign'>
+                <view class='search-sign-item'>土猪土猪土猪</view>
+                <view class='search-sign-item'>土猪</view>
+                <view class='search-sign-item'>土鸡</view>
+                <view class='search-sign-item'>土鸡</view>
+                <view class='search-sign-item'>土鸡</view>
+                <view class='search-sign-item'>土鸡</view>
+                <view class='search-sign-item'>土鸡</view>
+                <view class='search-sign-item'>土鸡</view>
+                <view class='search-sign-item'>土猪土猪土猪</view>
+            </view>
+        </view>
+        <!--历史记录结束-->
+
+        <!--商品列表开始-->
+        <view class='search-result {{searchList==null?"hide":"show"}}'>
+            <!--商品排序开始-->
+            <view class='sort-box'>
+                <view class='sort-item' bindtap='showSort'>
+                    <text>全部</text>
+                    <text class='iconfont icon-xiangxia m-f-5'></text>
+                </view>
+                <view class='sort-item'>
+                    <text>销量最高</text>
+                </view>
+                <view class='sort-item'>
+                    <text>价格</text>
+                </view>
+            </view>
+            <!--商品排序结束-->
+            <!--商品排序展开开始-->
+            <view class='cover-box {{sortShow?"show":"hide"}}'>
+                <view class='sort-bg' bindtap='showSort'></view>
+                <view class='sort-cover'>
+                    <view class='option'>
+                        <text class=''>全部</text>
+                        <text class='iconfont'></text>
+                    </view>
+                    <view class='option'>
+                        <text>现售</text>
+                    </view>
+                    <view class='option'>
+                        <text>预售</text>
+                    </view>
+                    <view class='option'>
+                        <text>团购</text>
+                    </view>
+                </view>
+            </view>
+            <!--商品排序展开结束-->
+            <view class='goods-list'>
+
+
+                <view class='goods-item1'>
+                    <!--<view class='fish'></view>-->
+                    <view class='goods-text'>
+                        <text class='goods-h2'>山里来的土猪</text>
+                        <text class='goods-price'>
+                            <text class='price-avtice'>36</text>元/1斤
+                        </text>
+                        <text>销量：100 | 邮费：包邮</text>
+                    </view>
+                    <view class='goods-img'>
+                        <image src='../../../style/img/dafdd95b-a.jpg'></image>
+                        <!--<view class='goods-x1'></view>-->
+                    </view>
+                    <view class='recommend-border'></view>
+                    <view class='recommend-border2'></view>
+                    <text class='xiaoshou'>现售</text>
+                </view>
+
+                <view class='goods-item1'>
+                    <!--<view class='fish'></view>-->
+                    <view class='goods-text'>
+                        <text class='goods-h2'>山里来的土猪</text>
+                        <text class='goods-price'>
+                                    <text class='price-avtice'>36</text>元/1斤</text>
+                        <text>销量：100 | 邮费：包邮</text>
+                    </view>
+                    <view class='goods-img'>
+                        <image src='../../../style/img/dafdd95b-a.jpg'></image>
+                        <!--<view class='goods-x1'></view>-->
+                    </view>
+                    <view class='recommend-border'></view>
+                    <view class='recommend-border2'></view>
+                    <text class='xiaoshou'>现售</text>
+                </view>
+            </view>
+        </view>
+        <!--商品列表结束-->
+    </view>
+
+</view>

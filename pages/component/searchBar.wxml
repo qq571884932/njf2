@@ -1,0 +1,10 @@
+<!--搜索条开始-->
+    <view animation="{{animationData}}" style='top:{{searchTopDistance+"px!important"}}' class='search-box'>
+        <view class='search-block2'>
+            <text class='iconfont icon-guanbi'></text>
+            <input class='search-input' placeholder="商品名" focus='{{focus}}' bindinput='doSearch' value='{{searchVal}}'></input>
+            <text bindtap='delVal' class='iconfont icon-shanchu1 {{searchVal==""?"hide2":"show2"}}'></text>
+        </view>
+        <text class='search-text' bindtap='toSearch'>搜索</text>
+    </view>
+<!--搜索条结束-->

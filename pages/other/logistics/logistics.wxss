@@ -1,0 +1,35 @@
+.box{
+    width: 100%;
+}
+.box .top{
+    width: 90%;
+    height: 260rpx;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top .img{
+    margin-right: 20rpx;
+}
+.top .img image{
+    width: 180rpx;
+    height: 180rpx;
+    background-color: red;
+}
+.box .info{
+    height: 180rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 30rpx;
+    color: #A4A4A4;
+}
+.info .state text{
+    color: #FA9433;
+    font-size: 38rpx;
+}
+.info .phone .blue{
+    color: #0B8FF2;
+    font-weight: 700
+}

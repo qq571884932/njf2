@@ -1,0 +1,8 @@
+<!--底部加载-->
+            <view class='bottom-load'>
+                  <view class='load-block'>
+                        <image src='http://www.njf2016.com/wx/img/njf.gif'></image>
+                        <text>努力加载中…</text>
+                  </view>
+            </view>
+            <!--底部加载结束-->

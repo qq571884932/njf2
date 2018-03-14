@@ -1,0 +1,31 @@
+<view class='site-box'>
+    <radio-group bindchange="radioChange">
+        <view class='list' wx:for="{{list}}" wx:key="key">
+            <view class='list-top'>
+                <text>{{item.receive}}</text>
+                <text>{{item.receivephone}}</text>
+            </view>
+            <view class='list-centre'>
+                <text>{{item.withaddress}}</text>
+            </view>
+            <view class='list-bottom'>
+                <view class='list-bottom-left'>
+                    <label>
+                        <radio value='{{item.addressID}}' checked='{{item.isDefault==1?true:false}}' />
+                        <text>默认地址</text>
+                    </label>
+                </view>
+                <view class='list-bottom-right'>
+                    <navigator open-type='redirect' url="../addsite/addsite?addressID={{item.addressID}}" hover-class="none">编辑</navigator>
+                    <text bindtap='del' data-addressID="{{item.addressID}}">删除</text>
+                </view>
+            </view>
+        </view>
+        <view class='foot'>
+
+        </view>
+    </radio-group>
+    <view class='add'>
+        <navigator url='../addsite/addsite' hover-class='none'>添加新地址</navigator>
+    </view>
+</view>

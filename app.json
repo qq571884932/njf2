@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/login/wxVerify/wxVerify",
+    "pages/njf/njf",
+    "pages/other/merchant/shop/shop",
+    "pages/logs/logs",
+    "pages/myCart/myCart",
+    "pages/my/my",
+    "pages/other/search/search",
+    "pages/other/test/test",
+    "pages/other/classify/classify",
+    "pages/login/login/login",
+    "pages/login/wxLogin/wxLogin",
+    "pages/other/address/addrlist/addrlist",
+    "pages/other/address/site/site",
+    "pages/other/address/addsite/addsite",
+    "pages/other/order/order",
+    "pages/login/WxAccredit/WxAccredit",
+    "pages/login/wxLogin/wxLogin",
+    "pages/other/dingChuang/dingChuang",
+    "pages/other/guideApp/guideApp"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#66BB47",
+    "navigationBarTitleText": "农卷风商城",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#787878",
+    "borderStyle": "#787878",
+    "selectedColor": "#787878",
+    "list": [
+      {
+        "iconPath": "style/img/icon-caidaniconshouyehui.png",
+        "selectedIconPath": "style/img/icon-caidaniconshouyehui-a.png",
+        "pagePath": "pages/njf/njf",
+        "text": "首页"
+      },
+      {
+        "iconPath": "style/img/icon-gouwuche .png",
+        "selectedIconPath": "style/img/icon-gouwuche-a.png",
+        "pagePath": "pages/myCart/myCart",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "style/img/icon-wodexuanzhong.png",
+        "selectedIconPath": "style/img/icon-wodexuanzhong-a.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      },
+      {
+        "iconPath": "style/img/2.png",
+        "selectedIconPath": "style/img/2.png",
+        "pagePath": "pages/other/guideApp/guideApp",
+        "text": "可视商圈"
+      }
+    ]
+  }
+}

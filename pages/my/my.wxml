@@ -1,0 +1,44 @@
+<!--pages/HomePage2/HomePage2.wxml-->
+<view class='box'>
+    <view class='top'>
+        <view class='user-img'>
+            <image src='{{userimg==""?userImgSring:userimg}}'></image>
+        </view>
+        <view class='user-info'>
+            <view class='font' bindtap='toLogin'>
+                {{username==""?"登录/注册":username}}
+            </view>
+        </view>
+    </view>
+    <view class='bottom'>
+        <view>
+            <navigator hover-class='none' url='{{order}}'>
+                <text class='iconfont icon-dingdan1 font-size'></text>
+                <text class='txt'>我的订单</text>
+                <text class='iconfont icon-qianwang right'></text>
+            </navigator>
+        </view>
+        <view>
+            <navigator hover-class='none' url='{{addr}}'>
+                <text class='yellow iconfont icon-dizhi font-size'></text>
+                <text class='txt'>我的收货地址</text>
+                <text class='iconfont icon-qianwang right'></text>
+            </navigator> 
+        </view>
+        <view>
+            <navigator>
+                <text class='red iconfont icon-dianpu font-size'></text>
+                <text class='txt'>成为卖家</text>
+                <text class='iconfont icon-qianwang right'></text>
+            </navigator>
+        </view>
+        <view>
+            <navigator class='none-border'>
+                <text class='blue iconfont icon-guanyuwomen font-size'></text>
+                <text class='txt'>关于我们</text>
+                <text class='iconfont icon-qianwang right'></text>
+            </navigator>
+        </view>
+    </view>
+    <button hidden='{{userimg==""?true:false}}' class='esc' bindtap='esc'>退出账号</button>
+</view>

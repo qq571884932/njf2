@@ -1,0 +1,23 @@
+<!--pages/other/logistics/logistics.wxml-->
+<view class='box'>
+    <view class='top'>
+        <view class='img'>
+            <image src=''></image>
+        </view>
+        <view class='info'>
+            <view class='state'>
+                <text>已签收</text>
+            </view>
+            <view class='express'>
+                <text>中通快递:482567930618</text>
+            </view>
+            <view class='phone'>
+                <text>官方电话:</text>
+                <text class='blue'>95311</text>
+            </view>
+        </view>
+    </view>
+    <view class='bottom'>
+        
+    </view>
+</view>

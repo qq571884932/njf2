@@ -1,0 +1,21 @@
+<view class='wrap'>
+<!-- 上部分 -->
+  <view class='top'>
+      <view class='box'>
+        <view><image src='../../../style/img/njflogo.png'></image></view>
+        <text class='njf'>农卷风</text>
+        <text class='intro'>深圳艺购科技有限公司</text>
+      </view>
+  </view>
+  <!-- 下部分 -->
+  <view class='bottom'>
+    <view class='wrap'>
+        <view class='title'><text>该程序将获得以下权限：</text></view>
+        <view class='content'><text>· 获得您的公开信息（昵称、头像等）</text></view>
+        <view class='but'>
+           <button bindtap='reject'>账号登陆</button>
+           <button bindtap='Agree' bindtap='wxLogin'>允许</button>
+        </view>
+    </view>
+  </view>
+</view>

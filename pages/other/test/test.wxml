@@ -1,0 +1,4 @@
+<!--pages/other/test/test.wxml-->
+ <!-- <web-view src="https://app.njf2016.com/small_program/goodsDetails.html"></web-view>  -->
+ <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
+

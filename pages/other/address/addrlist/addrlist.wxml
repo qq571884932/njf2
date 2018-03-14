@@ -1,0 +1,28 @@
+<!--pages/addrlist/addrlist.wxml-->
+<view class='box'>
+    <view class='top'>
+        <view class='top-list'>
+            <view bindtap='p0'>{{choose_one}}</view>
+            <view bindtap='c250' hidden='{{two}}'>{{choose_two}}</view>
+            <view hidden='{{three}}'>{{choose_three}}</view>
+        </view>
+        <view class='wire' style='position: relative;transition: all .5s;top: 95rpx;left: {{left}}rpx;'></view>
+    </view>
+    <view class='bottom'>
+        <view class='list' hidden='{{if_one}}'>
+            <block wx:for="{{addr}}" wx:key="key">
+                <view data-code='{{item.code}}' data-name='{{item.name}}' bindtap='province'>{{item.name}}</view>
+            </block>
+        </view>
+        <view class='list' hidden='{{if_two}}'>
+            <block wx:for="{{addr_two}}" wx:key="key">
+                <view bindtap='c' data-name='{{item.name}}' data-code='{{item.code}}' >{{item.name}}</view>
+            </block>
+        </view>
+        <view class='list' hidden='{{if_three}}'>
+             <block wx:for="{{addr_three}}" wx:key="key">
+                <view data-name='{{item.name}}' bindtap='county'>{{item.name}}</view>
+            </block>
+        </view>
+    </view>
+</view>

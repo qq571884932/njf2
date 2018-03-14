@@ -1,0 +1,74 @@
+.address{
+    display: flex;
+    flex-direction: column;
+    font-size: 30rpx;
+}
+.address>view{
+    height: 90rpx;
+    width: 96%;
+    padding: 0 3%;
+    line-height: 90rpx;
+    border-bottom: 1px solid #eee;
+}
+.address view text{
+    display: inline-block;
+    vertical-align: middle;
+}
+.address view input{
+    display: inline-block;
+    vertical-align: middle;
+}
+.address view input.one{
+    width: 600rpx;
+}
+.address view input.two{
+    width: 568rpx;
+}
+.address .background{
+    background: url("http://www.njf2016.com/wx/img/click_img.png") no-repeat 710rpx/30rpx;
+}
+.address .background text{
+    display: inline-block;
+    vertical-align: middle;
+}
+.address .background view{
+    display: inline-block;
+    vertical-align: middle;
+    width: 73%;
+}
+.address .textarea::-webkit-scrollbar{
+    display: none;
+}
+.address .textarea{
+    width: 568rpx;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 28rpx;
+    max-height: 100rpx;
+    min-height: 56rpx;
+}
+.address view.addr{
+    height: auto;
+}
+.address .addr text{
+    display: inline-block;
+    vertical-align: middle;
+}
+.address .addr textarea{
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 40rpx;
+}
+.bottom{
+    position: fixed;
+    bottom:55%;
+    text-align: center;
+    border: none;
+}
+.bottom button{
+    display: block;
+    width: 700rpx;
+    margin: 0 auto;
+    background: linear-gradient(to bottom left, #008000 , #03CB03); /* 标准的语法 */
+    color: #fff;
+}

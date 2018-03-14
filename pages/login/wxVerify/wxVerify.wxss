@@ -1,0 +1,48 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin: 0 auto;
+}
+.box>view{
+    border-bottom: 1px solid #EEEEEE;
+    margin-top: 15rpx;
+    background-color: sandybrown;
+}
+.box .phone{
+    display: flex;
+
+    align-items: center;
+}
+.box>view>input{
+    flex: 1;
+    display: block;
+    height: 100rpx;
+    background-color: red;
+}
+.box>view>text{
+    width: 60rpx;
+    height: 100rpx;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: aqua;
+}
+.yzm{
+    padding: 0rpx!important;
+    display: block;
+    width: 170rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 28rpx;
+    color: #999;
+    border: solid #eee 1rpx;
+}
+.phone button{
+    border-radius: 10rpx;
+}
+.phone button::after{
+    display: none;
+}
+.placeholder{
+    font-size: 28rpx;
+}

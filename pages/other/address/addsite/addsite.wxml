@@ -1,0 +1,22 @@
+<form bindsubmit="formSubmit">
+    <view class='address'>
+        <view>
+            <text>收货人：</text>
+            <input name="consignee" value='{{name}}' type='text' class='one'></input>
+        </view>
+        <view>
+            <text>手机号码：</text>
+            <input name="userPhone" value='{{phone}}' type='text' class='two'></input>
+        </view>
+        <view class='background'>
+            <navigator hover-class='none' url='../addrlist/addrlist'>{{list}}{{addr}}</navigator>
+        </view>
+        <view class='addr'>
+            <text>详细地址：</text>
+            <textarea value='{{detail}}' name="addr" maxlength='-1' auto-height="true" class='textarea'></textarea>
+        </view>
+        <view class='bottom'>
+            <button formType="submit">保存</button>
+        </view>
+    </view>
+</form>

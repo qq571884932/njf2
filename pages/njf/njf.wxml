@@ -1,0 +1,109 @@
+<!--pages/njf/njf.wxml-->
+<view class='content' id='content'>
+<scroll-view bindscroll="scroll" style="height:100vh"  scroll-y bindscrolltolower="lower" class='scroll-box' scroll-into-view="content2">
+
+      <!--搜索条-->
+      <view class='top-bar' bindanimationend='aa'>
+            <view class='address-block' bindtap='toLocation'>
+                  <text class='iconfont icon-zuobiao'></text>
+                  <text>{{address}}</text>
+            </view>
+            <view class='search-block' bindtap='toSearch'>
+                  <text class='iconfont icon-guanbi'></text>
+                  <text>土豬</text>
+            </view>
+      </view>
+      <!--搜索条结束-->
+      <!--分类-->
+      <view class='type-box swiper-container'>
+            <swiper class="" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" current="{{swiperCurrent}}" class="swiper">
+                  <block>
+                        <swiper-item>
+                              <view class='type-block'>
+                                    <view class='type-item' wx:for="{{typeItem}}" bindtap='onClassify' id="{{item.id}}">
+                                          <image src="{{item.img}}">
+                                          </image>
+                                          <text>{{item.title}}</text>
+                                    </view>
+                              </view>
+                        </swiper-item>
+                        <!-- <swiper-item>
+                              <view class='type-block'>
+                                    <view class='type-item' wx:for="{{typeItem2}}">
+                                          <image src="{{item.img}}">
+                                          </image>
+                                          <text>{{item.title}}</text>
+                                    </view>
+                              </view>
+                        </swiper-item> -->
+                  </block>
+            </swiper>
+      </view>
+      <!--分类结束-->
+      <!--推荐商品-->
+      <view class='recommend-box'>
+            <view class='title-bar'>
+                  <view class='recommend-hr'></view>
+                  <text>推荐商品</text>
+            </view>
+            <!--列表开始-->
+            <view class='recommend-content'>
+
+                  <view class='goods-item1'>
+                        <!--<view class='fish'></view>-->
+                        <view class='goods-text'>
+                              <text class='goods-h2'>山里来的土猪</text>
+                              <text class='goods-price'>
+                                  <text class='price-avtice'>36</text>元/1斤
+                              </text>
+                              <text>销量：100 | 邮费：包邮</text>
+                        </view>
+                        <view class='goods-img'>
+                              <image src='../../style/img/dafdd95b-a.jpg'></image>
+                              <!--<view class='goods-x1'></view>-->
+                        </view>
+                        <!-- <view class='recommend-border'></view>
+                        <view class='recommend-border2'></view>
+                        <text class='xiaoshou'>现售</text> -->
+                  </view>
+
+                  <view class='goods-item1'>
+                        <view class='goods-text'>
+                              <text class='goods-h2'>龙川上坪 家和农场 赣南脐橙 橙子</text>
+                              <text class='goods-price'>
+  <text class='price-avtice'>85</text>元/5斤</text>
+                              <text>销量：100 | 邮费：包邮</text>
+                        </view>
+                        <view class='goods-img'>
+                              <image src='../../style/img/ac87cea9-f.jpg'></image>
+                        </view>
+                        <!-- <view class='recommend-border'></view>
+                        <view class='recommend-border2'></view>
+                        <text class='xiaoshou'>团购</text> -->
+                  </view>
+
+                  <view class='goods-item1'>
+                        <view class='goods-text'>
+                              <text class='goods-h2'>紫金蓝塘 本地百草黑山羊 活羊批发</text>
+                              <text class='goods-price'>
+  <text class='price-avtice'>50</text>元/1斤</text>
+                              <text>销量：100 | 邮费：包邮</text>
+                        </view>
+                        <view class='goods-img'>
+                              <image src='../../style/img/dafdd95b-a.jpg'></image>
+                        </view>
+                        <!-- <view class='recommend-border'></view>
+                        <view class='recommend-border2'></view>
+                        <text class='xiaoshou'>活动</text> -->
+                  </view>
+
+
+            </view>
+            <!--列表结束-->
+            <include src="/pages/component/footLoading.wxml"/>
+      </view>
+      <!-- <view class='floating-window'>
+      <image class='ks' bindtap='toApp' src='http://www.njf2016.com/wx/img/ks.png'></image>
+      </view> -->
+      </scroll-view>
+</view>

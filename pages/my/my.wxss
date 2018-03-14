@@ -1,0 +1,97 @@
+page{
+    background-color: #F4F4F4;
+}
+.box{
+    
+    display: flex;
+    flex-direction: column;
+}
+.box .top{
+    padding: 20rpx 0rpx;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+.box .top view{
+    height: 150rpx;
+}
+.box .top .user-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20rpx 0 38rpx;
+}
+.top .user-img image{
+    width: 120rpx;
+    height: 120rpx;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+}
+.box .top .user-info{
+    line-height: 150rpx;
+    font-size: 28rpx;
+}
+.box .bottom{
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    background-color: #fff;
+}
+.box .bottom .font-size{    /*设置图标大小*/
+    font-size: 40rpx;
+}
+.box .bottom .right{
+    float: right;
+    margin-right: 20rpx;
+}
+.box .bottom>view{
+    background-color: #fff;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-bottom: 2rpx;
+}
+.bottom>view>text{
+    display: inline-block;
+    width: 20rpx;
+    height: 20rpx;
+}
+.bottom>view>navigator{
+    display: inline-block;
+    width: 95%;
+    margin-left: 5%;
+    border-bottom: 1px solid #EAEAEA;
+    height: 90rpx;
+}
+.bottom navigator>text{
+    display: inline-block;
+    vertical-align: middle;
+}
+.bottom navigator .txt{
+    margin-left: 20rpx;
+}
+.bottom>view .none-border{    /*清除最后一个下划线*/
+    border: none;
+}
+.esc{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    border-radius: 0;
+}
+button::after{
+  content: "";
+  display: none;
+}
+.yellow{
+  color: #FFB000;
+}
+.red{
+  color: #FB4E44;
+}
+.blue{
+  color: #1C98B9;
+}
+.font{
+  font-size: 30rpx;
+}

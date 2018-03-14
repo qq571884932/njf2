@@ -1,0 +1,78 @@
+/* pages/login/WxAccredit/WxAccredit.wxss */
+.top{
+  display: block;
+  height: 400rpx;
+}
+/*上部分*/
+.top .box{
+  width: 600rpx;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #F2F2F2;
+}
+.top .box image{
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0 auto;
+  border-radius: 30rpx;
+}
+.top .box .njf{
+  margin: 10rpx 0 20rpx;
+  font-weight: 600;
+}
+.top .box .intro{
+   font-size: 28rpx;
+   color: #B7B7B7;
+}
+/*下部分*/
+.bottom{
+  width: 600rpx;
+  height: 400rpx;
+  margin: 58rpx auto 0;
+  /* background-color: red; */
+}
+.bottom .wrap{  
+  
+}
+.bottom .wrap .title{
+  font-size: 30rpx;
+}
+.bottom .wrap .content{
+  font-size: 25rpx;
+  margin: 35rpx 0 40rpx;
+  color: #B5B5B5;
+  background-color: #fff;
+}
+.wrap .content text{
+    font-size: 26rpx;
+}
+.bottom  .but{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 70rpx;
+}
+.bottom  .but  button{
+  display: inline-block;
+  width: 280rpx;
+}
+.bottom  .but  button:nth-child(1){
+  float: left;
+  color: #999;
+  border: 1rpx solid #999;
+}
+.bottom  .but  button:nth-child(2){
+  float: right;
+  background-color: #66BB47;
+  color: #fff;
+  border: 1rpx #299503 solid;
+}
+button::after{
+    display: none;
+}
+button::before{
+    display: none;
+}

@@ -1,0 +1,90 @@
+<!--pages/user/order/order.wxml-->
+<view class='order' catchtap='hidd'>
+  <view class='fixed'>
+    <view class='top'>
+      <scroll-view scroll-x="true">
+        <view wx:for="{{menu}}" data-index='{{index}}' class='{{menuId==item.id?"false":"true"}}' bindtap='line'>{{item.name}}</view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='content' wx:for="{{list}}" wx:key="{{key}}">
+    <view class='o-box'>
+      <navigator hover-class='none'>
+        <!-- 头部 -->
+        <image src='{{item.shopLogo}}'></image>
+        <text>{{item.shopName}}</text>
+        <image src='http://www.njf2016.com/wx/img/arrow.png'></image>
+        <text>待付款</text>
+      </navigator>
+      <view class='goods' bindtap='oddr'>
+        <!-- 订单详情 -->
+        <view class='good-img'>
+          <!-- 商品图片-->
+          <image src='{{item.goodsImg}}'></image>
+        </view>
+        <view class='good-cnt'>
+          <!-- 商品内容-->
+          <view class='cnt-left'>
+            <view>
+              <text class='type'>预售</text>{{item.goodsName}}
+            </view>
+            <view>
+              订单编号：{{item.orderNo}}
+              <text class='position'>×{{item.digit}}</text>
+            </view>
+            <view>
+              <text>￥{{item.discountPrice}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='btn'>
+        <view class='txt'>
+          <text>共{{item.digit}}件商品 合计：￥{{item.discountPrice * item.digit}}（免运费）</text>
+        </view>
+        <!-- 待付款 -->
+        <view class='but-box' hidden='{{menuId==0?false:true}}'>
+          <button data-keyID='{{item.keyID}}' data-orderNo='{{item.orderNo}}' bindtap='cancel'>取消订单</button>
+          <button class='but-369D28'>付款</button>
+        </view>
+        <!-- 待成团 -->
+        <view class='but-box' hidden='{{menuId==1?false:true}}'>
+
+        </view>
+        <!-- 待发货 -->
+        <view class='but-box' hidden='{{menuId==2?false:true}}'>
+          <button data-keyID='{{item.keyID}}' data-orderNo='{{item.orderNo}}' bindtap='urge'>催发货</button>
+          <button class='but-369D28'>再次购买</button>
+        </view>
+        <!-- 待收货 -->
+        <view class='but-box' hidden='{{menuId==3?false:true}}'>
+          <button data-keyID='{{item.keyID}}' data-orderNo='{{item.orderNo}}'>查看物流</button>
+          <button class='but-369D28'>确认收货</button>
+        </view>
+        <!-- 评价 -->
+        <view class='but-box' hidden='{{menuId==4?false:true}}'>
+          <view class='more'>
+            <view class='minute' hidden='{{minute}}'>
+              <text bindtap='logistics'>查看物流</text>
+              <text bindtap='del' data-del='{{item.keyID}}'>删除订单</text>
+            </view>
+            <text catchtap='show'>更多</text>
+          </view>
+          <button data-keyID='{{item.keyID}}' data-orderNo='{{item.orderNo}}'>再次购买</button>
+          <button class='but-369D28'>立即评价</button>
+        </view>
+        <!-- 完成 -->
+        <view class='but-box' hidden='{{menuId==5?false:true}}'>
+          <view class='more'>
+            <view class='minute {{orderView==item.orderNo?"":"hide"}}'>
+              <text bindtap='logistics'>查看物流</text>
+              <text bindtap='del' data-del='{{item.keyID}}'>删除订单</text>
+            </view>
+            <text catchtap='show' data-i='{{index}}' id='{{item.orderNo}}'>更多</text>
+          </view>
+          <button class='but-369D28'>再次购买</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

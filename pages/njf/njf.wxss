@@ -1,0 +1,169 @@
+/* pages/njf/njf.wxss */
+@import "../../style/font/icon.wxss";
+/*浮窗开始*/
+.floating-window{
+  display: block;
+  width: 300rpx;
+  height: 150rpx;
+  position:fixed;
+  bottom: 60rpx;
+  left: 230rpx; 
+  overflow: hidden;
+}
+
+
+.floating-window .ks{
+  display: block;
+  width: 300rpx;
+  height: 150rpx;
+  position:relative;
+  
+
+}
+.floating-window .ks-a{
+animation:mymove 1s infinite;
+animation-iteration-count:1;
+}
+@keyframes mymove
+{
+from {opacity:1;}
+to {opacity:0;}
+}
+/*浮窗结束*/
+
+/*搜索条*/
+.top-bar{
+  max-width: 100%;
+  padding: 20rpx;
+  height: 60rpx;
+  background: #fff;
+}
+.search-block text{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #757575;
+}
+.search-block .iconfont{
+  font-size: 35rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.top-bar .address-block{
+  width: 240rpx;
+  height: 60rpx;
+  background: #a6a6a6;
+  border-radius: 60rpx;
+  float: left;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.top-bar .search-block{
+  width: 440rpx;
+  height: 60rpx;
+  background: #ededed;
+  border-radius: 60rpx;
+  float: right
+}
+.address-block .iconfont{
+    font-size: 30rpx;
+    margin-left: 15rpx;
+ margin-right: 10rpx;
+}
+.address-block{
+  color: white;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+/*切换分类*/
+.swiper-container{  
+  background: #fff;
+  position: relative;  
+}  
+.swiper-container swiper{
+  height: 330rpx;
+}
+.swiper-container .wx-swiper-dot{  
+    width:  30rpx;
+    height: 10rpx;  
+    display: inline-flex;  
+    justify-content:space-between;  
+    border-radius: 50%;  
+}  
+.swiper-container .wx-swiper-dot::before{  
+    content: '1';  
+    flex-grow: 1;    
+    background: #bfbfbf;  
+    border-radius: 10rpx;     
+}  
+.swiper-container .wx-swiper-dot-active::before{  
+    background:#66BB47; 
+     border-radius: 10rpx;    
+} 
+.type-block{
+  width: 102%;
+  height: 440rpx;
+}
+.type-item{
+  float: left;
+  width: 189rpx;
+  height: 150rpx;
+}
+.type-item image{
+  margin-left: 45rpx;
+  display: block;
+    width: 100rpx;
+  height: 100rpx;
+}
+.type-item text{
+  width: 189rpx;
+  display: block;
+  text-align: center;
+  height: 100rpx;
+  font-size: 26rpx;
+}
+/*推荐商品*/
+.title-bar{
+  background: white;
+  width: 100%;
+  padding: 40rpx 0rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.recommend-hr{
+  display: block;
+  background: #000;
+  width: 300rpx;
+  height: 2rpx;
+margin: 0rpx auto;
+}
+.title-bar text{
+  font-weight: 700;
+  display: block;
+  background: white;
+width: 200rpx;
+margin: -20rpx auto;
+font-size: 30rpx;
+}
+
+.goods-x1{
+  width: 120rpx;
+  height: 120rpx;
+  background-size: 120rpx;
+  background-image: url("http://www.njf2016.com/wx/img/goods_x/x1.png");
+  position: absolute;
+  bottom: -30rpx;
+left: 130rpx;
+z-index: 100;
+}
+
+
+.fish{
+    width: 70rpx;
+  height: 70rpx;
+  background-image: url("http://www.njf2016.com/wx/img/goods_x/y.png");
+  background-size: 70rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+}

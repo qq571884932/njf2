@@ -1,0 +1,44 @@
+page{
+    background-color: #F4F4F4;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.box .top{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+.box .top view{
+    height: 150rpx;
+}
+.box .top .user-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20rpx;
+}
+.top .user-img image{
+    width: 120rpx;
+    height: 120rpx;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+}
+.box .top .user-info{
+    line-height: 150rpx;
+    font-size: 28rpx;
+}
+.box .bottom{
+    margin-top: 20rpx;
+    font-size: 26rpx;
+}
+.box .bottom>view{
+    background-color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.bottom>view>text{
+    display: block;
+    padding-left: 80rpx;
+}

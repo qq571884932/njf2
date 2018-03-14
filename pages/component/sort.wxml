@@ -1,0 +1,32 @@
+<!--商品排序开始-->
+<view class='sort-content' style='top:{{searchTopDistance+40+"px!important"}}'>
+            <view class='sort-box'>
+                <view class='sort-item' bindtap='showFilter'>
+                    <text>{{filterName}}</text>
+                    <text class='iconfont {{filterShow?"icon-xiangshang":"icon-xiangxia"}} m-f-5'></text>
+                </view>
+                <view id='1' bindtap='sortCheck' class='sort-item {{sortType==1?"dark-green":""}}'>
+                    <text>销量最高</text>
+                </view>
+                <view id='2' bindtap='sortCheck' class='sort-item {{sortType==2?"dark-green":""}}'>
+                    <text>价格</text>
+                    <text class='iconfont {{priceSort?"icon-xiangshangjiantou":"icon-xiangxiajiantou"}}'></text>
+                </view>
+            </view>
+            <!--商品排序结束-->
+            <!--商品排序展开开始-->
+            <view class='cover-box {{filterShow?"show":"hide"}}'>
+                <view class='sort-bg' bindtap='showFilter'></view>
+                <view class='sort-cover'>
+                    <view wx:for="{{filterArr}}" class='option {{filterType==item.id?"sort-active":""}}' id='{{item.id}}' bindtap='checkoutSort'>
+                        <text>{{item.name}}</text>
+                        <text class='iconfont icon-iconfontcheck'></text>
+                    </view>
+                    
+                </view>
+            </view>
+            <!--商品排序展开结束-->
+            <!--占位-->
+            
+ </view>
+ <view class='occupy-view' style=''></view>

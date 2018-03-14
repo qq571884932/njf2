@@ -1,0 +1,136 @@
+/* pages/other/merchant/shop/shop.wxss */
+.shop-box{
+    width: 100%;
+    height: 110px;
+    background: #fff;
+
+}
+.shop-bor{
+    max-width: 100%;
+    height: 170rpx;
+  background: #66BB47;
+    padding: 0rpx 20rpx;
+    display: flex;
+}
+.shop-img{
+  width: 180rpx;
+height: 180rpx;  
+}
+.shop-img image{
+width: 180rpx;
+height: 180rpx;
+margin-top: 20rpx;
+border-radius:20rpx; 
+}
+.shop-info .shop-slef{
+font-size: 28rpx;
+background: #FF3B08;
+line-height: 40rpx;
+padding: 0rpx 8rpx;
+border-radius: 5rpx;
+color: #fff;
+
+}
+.shop-info{
+    padding: 20rpx;
+flex: 1;
+margin-top: 20rpx;
+font-size: 33rpx;
+
+line-height: 40rpx;
+}
+.shop-name{
+    display: block;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    font-weight: 700;
+     color: #fff;
+     letter-spacing:2rpx;
+}
+.announcement{
+    font-size: 25rpx;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+}
+.other{
+    width: 120rpx;
+    height: 120rpx;
+    margin-top: 40rpx;
+    border-left: 1px solid #fff;
+    text-align: center;
+}
+.other .icon-msnui-sms-bubble{
+    color: #fff;
+    font-size: 60rpx;
+    line-height: 120rpx;
+    margin-left: 10rpx;
+}
+.authentication{
+   
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+}
+.authentication .authentication-item{
+
+position: relative;
+    display: block;
+
+    width: 40rpx;
+    height: 40rpx;
+text-align: center;
+margin-right: 5rpx;
+}
+.authentication .authentication-item .authentication-text{
+    display: block;
+    width: 40rpx;
+    text-align: center;
+     line-height: 41rpx!important;
+font-size: 22rpx;
+color: #fff;
+}
+.authentication .authentication-item .icon-xingxing{
+position: absolute;
+left: 0rpx;
+top: 0;
+font-size: 41rpx;
+color: #fff;
+}
+.shop-content{
+    position: relative;
+    width: 100%;
+    height: 83px;
+}
+.ddd{
+    width: 200rpx;
+    height: 100rpx;
+    border: 1rpx darkcyan solid;
+    border-radius: 100rpx;
+    margin: 20rpx;
+}
+.sort-content{
+    margin-top: -1rpx;
+    position: static!important;
+}
+.search-box{
+     position: static!important;
+}
+.sort-bg{
+    opacity: 0;
+}
+.sort-cover{
+     position: relative!important;
+     z-index: 10000;
+}

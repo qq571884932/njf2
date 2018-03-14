@@ -1,0 +1,337 @@
+/* pages/myCart/myCart.wxss */
+@import "../../style/font/icon.wxss";
+
+.content {
+      margin-bottom:100rpx; 
+}
+.null-block{
+  width: 100%;
+  height: 1rpx;
+}
+.cart-item {
+  margin-top: 15rpx;
+  width: 100%;
+  background: #fff;
+}
+.cart-info{
+  width: 100%;
+  height: 240rpx;
+  position: relative;
+}
+.cart-right{
+  margin-top: -1rpx;
+border-top: 1rpx solid #eee;
+  width: 450rpx;
+  height: 240rpx;
+  float: right
+}
+.edit-box{
+  position: absolute;
+  width: 450rpx;
+  height: 239rpx;
+  right: 0rpx;
+  top: 1rpx;
+  background: #fff;
+}
+.edit-block{
+  width: 320rpx;
+  height: 239rpx;
+  background: #fff;
+  float: left;
+}
+.edit-success{
+  width: 128rpx;
+  height: 239rpx;
+  float: right;
+}
+.edit-success button{
+  padding: 0rpx;
+   width: 128rpx;
+  height: 239rpx;
+border-radius:0rpx;
+background: darkgray;
+color: white;
+font-size: 37rpx;
+line-height: 239rpx;
+background: linear-gradient(to right, #21bd54, #238f46); 
+}
+.cart-bar {
+  width: 100%;
+  background: #fff;
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+/*  重写 checkbox 样式  */
+
+.my-checkbox .wx-checkbox-input {
+  text-align: center;
+  border: none;
+  font-size: 50rpx;
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.my-checkbox .wx-checkbox-input::before {
+  content: '\e60f';
+}
+
+.my-checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: none;
+  background: #fff;
+}
+
+.my-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50rpx;
+  color: #238f46;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\e625';
+}
+.checkbox-style1{
+  float: left;
+}
+.checkbox-style1 .wx-checkbox-input {
+  width: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.checkbox-style1 .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.checkbox-style2{
+  display: block;
+  float: left;
+}
+.checkbox-style2 .wx-checkbox-input{
+  width: 80rpx;
+  height: 240rpx;
+  line-height: 240rpx;
+
+}
+.checkbox-style2 .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 80rpx;
+  height: 240rpx;
+  line-height: 240rpx;
+
+}
+.cart-bar .icon-dianpu{
+  display: block;
+  float: left;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  color: #238f46;
+  margin-left: -10rpx;
+  width: 40rpx;
+}
+.cart-bar .icon-qianwang{
+  display: block;
+  float: left;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  color: #999;
+}
+.cart-shop-name{
+  display: block;
+  float: left;
+  font-size: 26rpx;
+  line-height: 100rpx;
+  margin-left: 15rpx;
+}
+.cart-info .cart-img{
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  margin-top: 20rpx;
+}
+.cart-text{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  width: 360rpx;
+  height: 220rpx;
+  float: left;
+}
+.cart-other{
+  margin-top: 10rpx;
+  width: 70rpx;
+  height: 220rpx;
+  float: right;
+  text-align: center;
+}
+.cart-title{
+  margin-top: 10rpx;
+  display: block;
+  width: 360rpx;
+  height: 90rpx;
+  font-size: 30rpx;
+  line-height: 43rpx;
+}
+.cart-specifications{
+  font-size: 32rpx;
+  line-height: 43rpx;
+  color: #c0c0c0;
+  display: block;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  height: 45rpx;
+  width: 300rpx;
+}
+.goods-icon{
+  background: #f9624e;
+  font-size: 25rpx;
+  color: white;
+  padding:2rpx 8rpx;
+  border-radius: 2rpx;
+  margin-right: 5rpx;
+}
+.cart-price{
+   font-size: 35rpx;
+  line-height: 43rpx;
+  color: #f9624e;
+}
+.cart-other .cart-num{
+display: block;
+  font-size: 35rpx;
+  line-height: 43rpx;
+  color: #c0c0c0;
+}
+.cart-other .icon-edit{
+  margin-top: 15rpx;
+  width: 70rpx;
+  height: 135rpx;
+  text-align: center;
+  display: block;
+  color: #000 !important;
+}
+/*编辑控件*/
+.edit-box .edit-num{
+margin-left: 8rpx;
+  margin-top: 30rpx;
+  
+}
+.edit-num{
+  width: 305rpx;
+  height: 80rpx;
+  background: white;
+}
+.edit-box .edit-specifications{
+margin-left: 8rpx;
+  margin-top: 30rpx;
+}
+.edit-specifications{
+  width: 295rpx;
+  height: 60rpx;
+  border: 1rpx solid #eee;
+  border-radius: 4rpx;
+  position: relative;
+}
+.edit-specifications .edit-specifications-text{
+  font-size: 28rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  display: block;
+  width: 200rpx;
+  height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.edit-specifications .icon-xiangxia{
+ line-height: 60rpx;
+position: absolute;
+right: 10rpx;
+top: 0rpx;
+}
+.edit-num input{
+  display: block;
+  float: left;
+  border-radius: 5rpx;
+  height: 76rpx;
+  width: 150rpx;
+  margin: 0rpx 10rpx;
+  text-align: center;
+  border: 1rpx solid #eee;
+}
+
+.edit-num button{
+display: block;
+float: left;
+width: 65rpx;
+border: 1rpx solid #eee;
+background: white;
+height: 80rpx;
+padding: 0rpx;
+text-align: center;
+margin: 0rpx;
+line-height: 80rpx;
+}
+.edit-num .add{
+       border-radius: 5rpx 0rpx 0rpx 5rpx;
+}
+.edit-num .minus{
+      border-radius: 0rpx 5rpx 5rpx 0rpx;
+}
+/*
+结算条
+*/
+.settlement-bar{
+      width: 100%;
+      height: 100rpx;
+      background: #fff;
+      position: fixed;
+      bottom: 0rpx;
+}
+.settlement-bar text{
+      line-height: 100rpx;
+      font-size: 30rpx;
+}
+.settlement-left{
+      width: 550rpx;
+      height: 100rpx;
+      float: left;
+      border-top: 1rpx solid #eee;
+}
+.check-all{
+      width: 250rpx;
+      float: left;
+}
+.total{
+      text-align: right;
+      width: 250rpx;
+      float: right;
+      margin-right: 30rpx;
+}
+.settlement-right{
+      text-align: right;
+      float: right;
+      width: 200rpx;
+      height: 100rpx;
+}
+.settlement-right button{
+      line-height: 100rpx;
+      border-radius: 0rpx; 
+      width: 200rpx;
+      height: 100rpx;
+      background: #f9624e;
+      float: right;
+      color: #fff;
+}
+button::after{
+      border: none;
+}
+.total-price{
+color: #f9624e;
+}

@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class='box'>
+    <form bindsubmit="formSubmit" bindsubmit="formSubmit">
+        <view class='login'>
+            <view class='userphone' style=''>
+                <input focus='{{true}}' name="userPhone" type='number' placeholder='请输入手机号或者账号' maxlength='11'></input>
+            </view>
+            <view class='password'>
+                <input name="password" type='text' password='true' placeholder='请输入密码'></input>
+            </view>
+        </view>
+        <view  class='login-button'>
+            <button  loading='{{ifLoading}}' redirect open-type='redirect' form-type='submit' type='submit'>登 录</button>
+        </view>
+    </form>
+</view>
