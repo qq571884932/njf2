@@ -20,6 +20,9 @@ Page({
             header: {'content-type': 'application/json'},
             success: function (res) {
                 if (res.data.result == "success") {
+                    that.setData({
+                        ifLoading: false
+                    })
                     wx.switchTab({
                         url: '../../my/my',
                         success: function (e) {
@@ -28,15 +31,37 @@ Page({
                             page.onLoad();
                         }
                     })
-                    wx.setStorageSync('login', res.data);
+                    wx.setStorage({
+                        key: 'login',
+                        data: res.data
+                    })
+                    // wx.setStorageSync('login', res.data);
                     wx.setStorageSync('token', res.data.content.token)
+                    wx.setStorageSync('Account', e.detail.value.userPhone);
+                    wx.setStorageSync('password', util.hex_md5(e.detail.value.password))
                 } else {
-                    console.log(res.data.error);
+                    that.setData({
+                        ifLoading: false
+                    })
+                    wx.showToast({
+                        title: "asds",//res.data.error
+                        icon: 'none',
+                        duration: 1500,
+                        mask: true,
+                    })
                     return;
                 }
             },
-            fail: function () {
-                console.log("登录失败")
+            fail: function (res) {
+                that.setData({
+                    ifLoading: false
+                })
+                wx.showToast({
+                    title: '网络超时',
+                    icon: 'none',
+                    duration: 1500,
+                    mask: true,
+                })
             }
         })
     }

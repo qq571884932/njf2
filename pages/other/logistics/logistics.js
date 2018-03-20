@@ -1,4 +1,4 @@
-// pages/other/logistics/logistics.js
+var url = require("../../../utils/util.js");
 Page({
 
     /**
@@ -10,9 +10,17 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        wx.request({
+            url: `${url.url}goodsHome/kaiDi.do?com${5}&nu=${888607900518054703}`,
+            header: {
+                "token": wx.getStorageSync("token")
+            },
+            method: 'GET',
+            success: function (res) {
+                console.log(res);
+            }
+        })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

@@ -1,4 +1,6 @@
-/* pages/login/WxAccredit/WxAccredit.wxss */
+page {
+    background-color: #fff;
+}
 .top{
   display: block;
   height: 400rpx;
@@ -33,7 +35,6 @@
   width: 600rpx;
   height: 400rpx;
   margin: 58rpx auto 0;
-  /* background-color: red; */
 }
 .bottom .wrap{  
   
@@ -63,6 +64,7 @@
   float: left;
   color: #999;
   border: 1rpx solid #999;
+    background-color: #fff;
 }
 .bottom  .but  button:nth-child(2){
   float: right;

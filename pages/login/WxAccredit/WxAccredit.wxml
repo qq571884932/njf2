@@ -14,7 +14,7 @@
         <view class='content'><text>· 获得您的公开信息（昵称、头像等）</text></view>
         <view class='but'>
            <button bindtap='reject'>账号登陆</button>
-           <button bindtap='Agree' bindtap='wxLogin'>允许</button>
+            <button bindtap='wxLogin'>允许</button>
         </view>
     </view>
   </view>

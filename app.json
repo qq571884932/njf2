@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/other/logistics/logistics",
     "pages/njf/njf",
     "pages/login/wxVerify/wxVerify",
-    
+    "pages/other/evaluate/evaluate",
+    "pages/login/wxVerify/wxVerify",
     "pages/other/merchant/shop/shop",
     "pages/logs/logs",
     "pages/myCart/myCart",
@@ -11,11 +13,13 @@
     "pages/other/test/test",
     "pages/other/classify/classify",
     "pages/login/login/login",
+    "pages/login/wxLogin/wxLogin",
     "pages/other/address/addrlist/addrlist",
     "pages/other/address/site/site",
     "pages/other/address/addsite/addsite",
     "pages/other/order/order",
     "pages/login/WxAccredit/WxAccredit",
+    "pages/login/wxLogin/wxLogin",
     "pages/other/dingChuang/dingChuang",
     "pages/other/guideApp/guideApp"
   ],
@@ -51,4 +55,3 @@
     ]
   }
 }
-  

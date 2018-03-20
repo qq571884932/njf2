@@ -13,19 +13,24 @@ Page({
     esc: function (e) {
         var _this = this;
         wx.showModal({
-            title: '',
+            title: '提示',
             content: '是否确认退出',
             showCancel: true,
             success: function (res) {
-                wx.removeStorageSync('login');
-                wx.removeStorageSync('token');
-                _this.setData({
-                    username: "",
-                    userImgSring: "../../style/img/defalt2-1.png",
-                    userimg: "",
-                    addr: '../login/login/login',
-                    order: '../login/login/login'
-                })
+                if (res.confirm) {
+                    wx.removeStorageSync('login');
+                    wx.removeStorageSync('token');
+                    _this.setData({
+                        username: "",
+                        userImgSring: "../../style/img/defalt2-1.png",
+                        userimg: "",
+                        addr: '../login/login/login',
+                        order: '../login/login/login'
+                    })
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+                
             },
         })
     },
@@ -43,21 +48,32 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var value = wx.getStorageSync('login');
-        if (value != "") {
-            var a = "";
-            this.setData({
-                userimg: value.content.userImage,
-                username: value.content.userName,
-                addr: '../other/address/site/site',
-                order: '../other/order/order'
-            })
-        } else {
-            this.setData({
-                addr: '../login/WxAccredit/WxAccredit',
-                order: '../login/WxAccredit/WxAccredit'
-            })
-        }
+        var _this = this;
+        wx.getStorage({
+            key: 'login',
+            success: function (res) {
+                console.log(res.data.content);
+                if (res.data.content.errcode == "") {
+                    _this.setData({
+                        addr: '../login/WxAccredit/WxAccredit',
+                        order: '../login/WxAccredit/WxAccredit'
+                    })
+                } else {
+                    _this.setData({
+                        userimg: res.data.content.userImage,
+                        username: res.data.content.userName,
+                        addr: '../other/address/site/site',
+                        order: '../other/order/order'
+                    })
+                }
+            },
+            fail: function () {
+                _this.setData({
+                    addr: '../login/WxAccredit/WxAccredit',
+                    order: '../login/WxAccredit/WxAccredit'
+                })
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

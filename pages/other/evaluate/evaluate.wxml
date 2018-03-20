@@ -1,0 +1,61 @@
+<!--pages/other/evaluate/evaluate.wxml-->
+<view class='box'>
+    <view class='top'>
+        <view class='coincide'>
+            <view class="img">
+                <image src=""></image>
+            </view>
+            <view class="grade">
+                <text>描述相符：</text>
+                <block wx:for="{{arr}}" wx:key="key">
+                    <text id='{{item.id}}' bindtap='click'
+                          class="ico iconfont {{item.id<=Integral-1?'icon-xingxing1':'icon-xingxing'}}"></text>
+                </block>
+            </view>
+            <view class="txt">
+                <text>{{content}}</text>
+            </view>
+        </view>
+        <view class='content'>
+            <textarea bindinput='content' placeholder='商品满足的期待吗？说说你使用的心得,分享给想买的Ta们吧'
+                      placeholder-style='font-size:28rpx'></textarea>
+            <view class="up_img">
+                <view class='img_num'>
+                    <block wx:for="{{img}}">
+                        <view class='picture'>
+                            <image id="index" src="{{item}}"></image>
+                            <text id="{{index}}" bindtap='del' class="iconfont icon-xingxing1"></text>
+                        </view>
+                    </block>
+                    <button style="{{model}}" type="primary" bindtap='listenerButtonChooseImage'>
+                        <text class='iconfont icon-xingxing1'></text>
+                        <text>0/3</text>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='bottom'>
+        <view class="review">
+            <text class="iconfont icon-xingxing1"></text>
+            <text>店铺评论</text>
+        </view>
+        <view class="logistics">
+            <text>物流服务</text>
+            <block wx:for="{{arr}}" wx:key="key">
+                <text id='{{item.id}}' bindtap='click2'
+                      class="ico iconfont {{item.id<=Logistics-1?'icon-xingxing1':'icon-xingxing'}}"></text>
+            </block>
+        </view>
+        <view class="serve">
+            <text>服务态度</text>
+            <block wx:for="{{arr}}" wx:key="key">
+                <text id='{{item.id}}' bindtap='click3'
+                      class="ico iconfont {{item.id<=Service-1?'icon-xingxing1':'icon-xingxing'}}"></text>
+            </block>
+        </view>
+        <view class='but'>
+            <button bindtap='issue'>发布</button>
+        </view>
+    </view>
+</view>

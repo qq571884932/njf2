@@ -7,25 +7,42 @@
 .box>view{
     border-bottom: 1px solid #EEEEEE;
     margin-top: 15rpx;
-    background-color: sandybrown;
 }
 .box .phone{
+    position: relative;
     display: flex;
-
     align-items: center;
+}
+
+.box .phone .del {
+    position: absolute;
+    display: block;
+    right: 180 rpx;
+    top: 35 rpx;
+    width: 30 rpx;
+    height: 30 rpx;
+    font-size: 30 rpx;
+    z-index: 999;
+}
+
+.box .phone .del::before {
+    position: absolute;
+    top: -33 rpx;
+    left: 0;
 }
 .box>view>input{
     flex: 1;
     display: block;
     height: 100rpx;
-    background-color: red;
 }
 .box>view>text{
     width: 60rpx;
     height: 100rpx;
+    line-height: 100 rpx;
     display: inline-block;
     vertical-align: middle;
-    background-color: aqua;
+    font-size: 50 rpx;
+    text-align: center;
 }
 .yzm{
     padding: 0rpx!important;
