@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/other/logistics/logistics",
     "pages/njf/njf",
-    "pages/login/wxVerify/wxVerify",
+    "pages/other/logistics/logistics",
+    
     "pages/other/evaluate/evaluate",
     "pages/login/wxVerify/wxVerify",
     "pages/other/merchant/shop/shop",
@@ -13,7 +13,6 @@
     "pages/other/test/test",
     "pages/other/classify/classify",
     "pages/login/login/login",
-    "pages/login/wxLogin/wxLogin",
     "pages/other/address/addrlist/addrlist",
     "pages/other/address/site/site",
     "pages/other/address/addsite/addsite",
