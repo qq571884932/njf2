@@ -18,6 +18,61 @@
         </view>
     </view>
     <view class='bottom'>
-        
+        <!-- 顶部-开始 -->
+        <view class='header'>
+            <view class="wrap">
+                <view class="timer">
+                    <text>03-13</text>
+                    <text>11:58</text>
+                </view>
+                <view class="line">
+                    <text class="iconfont icon-dizhi one"></text>
+                </view>
+                <view class="content">
+                    <text>运输中</text>
+                    <text>快递到达 河源</text>
+                </view>
+            </view>
+            <view class="wrap">
+                <view class="timer">
+                    <text>03-13</text>
+                    <text>11:58</text>
+                </view>
+                <view class="line">
+                    <text class="iconfont icon-dizhi one"></text>
+                </view>
+                <view class="content">
+                    <text>运输中</text>
+                    <text>快递到达 河源</text>
+                </view>
+            </view>
+            <view class="wrap">
+                <view class="timer">
+                    <text>03-13</text>
+                    <text>11:58</text>
+                </view>
+                <view class="line">
+                    <text class="iconfont icon-dizhi one"></text>
+                </view>
+                <view class="content">
+                    <text>运输中</text>
+                    <text>快递到达 河源</text>
+                </view>
+            </view>
+            <view class="wrap">
+                <view class="timer">
+                    <text>03-13</text>
+                    <text>11:58</text>
+                </view>
+                <view class="line">
+                    <text class="iconfont icon-dizhi one"></text>
+                </view>
+                <view class="content">
+                    <text>运输中</text>
+                    <text>快递到达 河源</text>
+                </view>
+            </view>
+        </view>
+        <!-- 顶部结束 -->
     </view>
 </view>

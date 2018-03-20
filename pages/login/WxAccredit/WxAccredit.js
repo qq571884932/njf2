@@ -4,7 +4,9 @@ Page({
     /**
      * 页面的初始数据
      */
-    data: {},
+    data: {
+        phone: 0
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -31,18 +33,8 @@ Page({
     /*------0拒绝微信登陆0--------*/
     reject: function (e) {
         wx.navigateTo({
-            url: '../login/login',
-            success: function (res) {
-                console.log(res);
-            },
-            fail: function (res) {
-                console.log(res);
-            }
+            url: '../login/login'
         })
-    },
-    /*------0同意微信登陆0--------*/
-    Agree: function (e) {
-
     },
     /**
      * 生命周期函数--监听页面隐藏
@@ -50,7 +42,6 @@ Page({
     onHide: function () {
 
     },
-
     /**
      * 生命周期函数--监听页面卸载
      */

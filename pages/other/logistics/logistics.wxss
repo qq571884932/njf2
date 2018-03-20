@@ -33,3 +33,69 @@
     color: #0B8FF2;
     font-weight: 700
 }
+
+/*----------------------------------------地址流程开始-----------------------------------*/
+.box .bottom {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box .bottom .header {
+    display: flex;
+    flex-direction: column;
+    font-size: 28 rpx;
+}
+
+.bottom .header .wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+/*********************************************日期部分》》开始*************************************/
+.header .wrap .timer {
+    width: 200 rpx;
+}
+
+.wrap .timer > text {
+    display: block;
+    font-size: 35 rpx;
+    text-align: right;
+    color: #FB851C;
+}
+
+.wrap .timer > text:nth-child(2) {
+    font-size: 25 rpx;
+    margin-top: 6 rpx;
+}
+
+/*********************************************日期部分》》结束*************************************/
+/********************************************中间部分---线》》开始*********************************/
+.header .wrap .line {
+    width: 2px;
+    height: 160 rpx;
+    margin: 0 40 rpx;
+    background-color: #000;
+    position: relative;
+}
+
+.wrap .line > text.one {
+    position: absolute;
+    left: -21 rpx;
+    top: -4 rpx;
+    font-size: 45 rpx;
+}
+
+/********************************************中间部分---线》》结束*********************************/
+/********************************************右边状态》》》**********************/
+.header .wrap .content {
+    background-color: red;
+}
+
+.wrap .content text {
+    display: block;
+}
+
+.wrap .content text:nth-child(1) {
+    margin-bottom: 10 rpx;
+    font-size: 34 rpx;
+}

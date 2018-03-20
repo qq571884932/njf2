@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/login/wxVerify/wxVerify",
+    "pages/other/logistics/logistics",
     "pages/njf/njf",
+    "pages/other/evaluate/evaluate",
+    "pages/login/wxVerify/wxVerify",
     "pages/other/merchant/shop/shop",
     "pages/myCart/myCart",
     "pages/my/my",

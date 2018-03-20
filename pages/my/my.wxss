@@ -37,7 +37,7 @@ page{
     background-color: #fff;
 }
 .box .bottom .font-size{    /*设置图标大小*/
-    font-size: 40rpx;
+    font-size: 20px;
 }
 .box .bottom .right{
     float: right;
@@ -78,6 +78,7 @@ page{
     margin-top: 30rpx;
     font-size: 30rpx;
     border-radius: 0;
+    background-color: #fff;
 }
 button::after{
   content: "";
