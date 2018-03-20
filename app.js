@@ -12,6 +12,9 @@ App({
 
 
     },
+    urltotal: function () {
+        return "http://192.168.2.100/njf/";
+    },
     globalData: {
         userInfo: null
     },
@@ -21,3 +24,9 @@ App({
         })
     }
 })
+// {
+//     "iconPath": "style/img/2.png",
+//         "selectedIconPath": "style/img/2.png",
+//             "pagePath": "pages/other/guideApp/guideApp",
+//                 "text": "可视商圈"
+// }

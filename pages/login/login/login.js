@@ -1,5 +1,5 @@
 // pages/login/login.js
-const url = "http://www.njf2016.com/";
+const url = getApp().urltotal();
 const util = require("../../../utils/md5.js");
 Page({
     /*获取当前页url*/

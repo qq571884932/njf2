@@ -49,17 +49,17 @@
             <!--列表开始-->
             <view class='recommend-content'>
 
-                  <view class='goods-item1'>
+                  <view class='goods-item1' wx:for="{{goodsList}}">
                         <!--<view class='fish'></view>-->
                         <view class='goods-text'>
-                              <text class='goods-h2'>山里来的土猪</text>
+                              <text class='goods-h2'>{{item.title}}</text>
                               <text class='goods-price'>
-                                  <text class='price-avtice'>36</text>元/1斤
+                                  <text class='price-avtice'>{{item.chuPrice}}</text>元/1斤
                               </text>
                               <text>销量：100 | 邮费：包邮</text>
                         </view>
                         <view class='goods-img'>
-                              <image src='../../style/img/dafdd95b-a.jpg'></image>
+                              <image src='{{item.advImg}}'></image>
                               <!--<view class='goods-x1'></view>-->
                         </view>
                         <!-- <view class='recommend-border'></view>
@@ -67,43 +67,16 @@
                         <text class='xiaoshou'>现售</text> -->
                   </view>
 
-                  <view class='goods-item1'>
-                        <view class='goods-text'>
-                              <text class='goods-h2'>龙川上坪 家和农场 赣南脐橙 橙子</text>
-                              <text class='goods-price'>
-  <text class='price-avtice'>85</text>元/5斤</text>
-                              <text>销量：100 | 邮费：包邮</text>
-                        </view>
-                        <view class='goods-img'>
-                              <image src='../../style/img/ac87cea9-f.jpg'></image>
-                        </view>
-                        <!-- <view class='recommend-border'></view>
-                        <view class='recommend-border2'></view>
-                        <text class='xiaoshou'>团购</text> -->
-                  </view>
-
-                  <view class='goods-item1'>
-                        <view class='goods-text'>
-                              <text class='goods-h2'>紫金蓝塘 本地百草黑山羊 活羊批发</text>
-                              <text class='goods-price'>
-  <text class='price-avtice'>50</text>元/1斤</text>
-                              <text>销量：100 | 邮费：包邮</text>
-                        </view>
-                        <view class='goods-img'>
-                              <image src='../../style/img/dafdd95b-a.jpg'></image>
-                        </view>
-                        <!-- <view class='recommend-border'></view>
-                        <view class='recommend-border2'></view>
-                        <text class='xiaoshou'>活动</text> -->
-                  </view>
-
-
             </view>
             <!--列表结束-->
-            <include src="/pages/component/footLoading.wxml"/>
+            <!-- <include src="/pages/component/footLoading.wxml"/> -->
       </view>
-      <!-- <view class='floating-window'>
+       <!-- <view class='floating-window'>
       <image class='ks' bindtap='toApp' src='http://www.njf2016.com/wx/img/ks.png'></image>
-      </view> -->
+      </view>  -->
+      <view class='floating-window' style='right:{{mX}}px;bottom:{{mY}}px'>
+      <!-- <button open-type="contact">haha</button> -->
+      <image class='ks2' bindtap='toApp' bindtouchmove="move" src='http://www.njf2016.com/wx/img/m_icon.gif'></image>
+      </view> 
       </scroll-view>
 </view>

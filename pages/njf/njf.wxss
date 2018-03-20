@@ -3,22 +3,25 @@
 /*浮窗开始*/
 .floating-window{
   display: block;
-  width: 300rpx;
-  height: 150rpx;
+  width: 75px;
+  height: 75px;
   position:fixed;
-  bottom: 60rpx;
-  left: 230rpx; 
-  overflow: hidden;
+  bottom: 50px;
+  margin:auto;
+  right: 0px;
+  /* overflow: hidden; */
 }
-
-
 .floating-window .ks{
   display: block;
   width: 300rpx;
   height: 150rpx;
   position:relative;
-  
-
+}
+.floating-window .ks2{
+  display: block;
+  width: 150rpx;
+ height: 150rpx;
+  position:relative;
 }
 .floating-window .ks-a{
 animation:mymove 1s infinite;

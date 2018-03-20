@@ -1,177 +1,69 @@
 <!--pages/myCart/myCart.wxml-->
-<view class='content'>
+<view class='content {{isLogin==1?"":"hide"}}'>
       <view class='null-block'></view>
       <!--购物车列表-->
       <view class='cart-box'>
             <!--商品列表块开始-->
-            <view class='cart-item'>
+            <view class='cart-item' wx:for="{{cartGoodsList}}" wx:for-index="idx">
                   <view class='cart-bar'>
-                        <checkbox-group class='my-checkbox checkbox-style1'>
-                              <checkbox bindtap='sonCheckAll' id='10'/>
+                        <checkbox-group id='{{idx}}' bindchange="checkboxChange" class='my-checkbox checkbox-style1'>
+                              <checkbox value='-1' checked='{{item.isShopCheck}}' bindtap='sonCheckAll' id='10'/>
                         </checkbox-group>
                         <text class='iconfont icon-dianpu'></text>
-                        <text class='cart-shop-name'>山里来土猪</text>
+                        <text class='cart-shop-name'>{{item.shopName}}</text>
                         <text class='iconfont icon-qianwang'></text>
                   </view>
-                  <view class='cart-info'>
-                        <checkbox-group class='my-checkbox checkbox-style2'>
-                              <checkbox checked='{{check==10?true:false}}' />
+
+                <!--购物商品开始-->
+                  <view class='cart-info' wx:for="{{item.dataList}}" wx:for-item="goods" wx:for-index="idx2">
+                        <checkbox-group id='{{idx}}' data-index="{{idx2}}" bindchange="checkboxChange2" class='my-checkbox checkbox-style2 {{goods.state==1?"":"hide"}}'>
+                              <checkbox checked='{{goods.isGoodsCheck}}' />
                         </checkbox-group>
-                        <image class='cart-img' src='../../style/img/dafdd95b-a.jpg'></image>
+                         <view class='prompt {{goods.state==1?"hide":""}}'>
+                            <view class='invalid-prompt'>失效</view>
+                        </view> 
+                        <image class='cart-img' src='{{goods.goodsImg}}'></image>
                         <view class='cart-right'>
                               <view class='cart-text'>
                                     <view class='cart-title'>
-                                          <text class='goods-icon'>现售</text>
-                                          <text>胜多负少斯蒂芬斯蒂芬第三方撒防守</text>
+                                          <text class='goods-icon {{item.shopType=="ziYing"?"":"hide"}}'>{{item.shopType=="ziYing"?"自营":""}}</text>
+                                          <text>{{goods.goodsName}}</text>
                                     </view>
-                                    <text class='cart-specifications'>3斤5两</text>
-                                    <text class='cart-price'>￥35</text>
+                                    <text class='cart-specifications'>{{goods.guiGe}}</text>
+                                    <text class='cart-price'>￥{{goods.discountPrice}}</text>
                               </view>
                               <view class='cart-other'>
-                                    <text class='iconfont icon-edit' bindtap='toggleEditView' id='1'></text>
-                                    <text class='cart-num'>×1</text>
+                                    <text class='iconfont icon-edit' bindtap='toggleEditView' id='{{goods.goodsID}}'></text>
+                                    <text class='cart-num'>×{{goods.digit}}</text>
                               </view>
                         </view>
                         <!--修改模块开始-->
-                        <view class='edit-box {{editView==1?"show":"hide"}}'>
+                        <view class='edit-box {{editView==goods.goodsID?"show":"hide"}}'>
                               <view class='edit-block'>
                                     <view class='edit-num'>
-                                          <button class='add'>
-                                                <text class='iconfont icon-tianjia'></text>
-                                          </button>
-                                          <input class='cart-input'></input>
-                                          <button class='minus'>
+                                          <button class='minus' bindtap='minus' id='{{idx}}' data-index="{{idx2}}">
                                                 <text class='iconfont icon-jian'></text>
+                                          </button>
+                                          <input id='{{idx}}' data-index="{{idx2}}" bindblur="blur" class='cart-input' value='{{goods.digit}}' type='number'></input>
+                                          <button class='add' bindtap='add' id='{{idx}}' data-index="{{idx2}}">
+                                                <text class='iconfont icon-tianjia'></text>
                                           </button>
                                     </view>
                                     <view class='edit-specifications'>
-                                          <text class='edit-specifications-text'>三斤五两</text>
+                                          <text class='edit-specifications-text'>{{goods.guiGe}}</text>
                                           <text class='iconfont icon-xiangxia'></text>
                                     </view>
                               </view>
                               <view class='edit-success'>
-                                    <button bindtap='toggleEditView' id='1'>完成</button>
+                                    <button bindtap='cartSuccess' id='{{idx}}' data-id="{{goods.keyID}}" data-index="{{idx2}}">完成</button>
                               </view>
                         </view>
                         <!--修改模块结束-->
                   </view>
-            </view>
-            <!--商品列表块结束-->
- <!--商品列表块开始-->
-            <view class='cart-item'>
-                  <view class='cart-bar'>
-                        <checkbox-group class='my-checkbox checkbox-style1'>
-                              <checkbox />
-                        </checkbox-group>
-                        <text class='iconfont icon-dianpu'></text>
-                        <text class='cart-shop-name'>山里来土猪</text>
-                        <text class='iconfont icon-qianwang'></text>
-                  </view>
-                  <view class='cart-info'>
-                        <checkbox-group class='my-checkbox checkbox-style2'>
-                              <checkbox />
-                        </checkbox-group>
-                        <image class='cart-img' src='../../style/img/dafdd95b-a.jpg'></image>
-                        <view class='cart-right'>
-                              <view class='cart-text'>
-                                    <view class='cart-title'>
-                                          <text class='goods-icon'>现售</text>
-                                          <text>胜多负少斯蒂芬斯蒂芬第三方撒防守</text>
-                                    </view>
-                                    <text class='cart-specifications'>3斤5两</text>
-                                    <text class='cart-price'>￥35</text>
-                              </view>
-                              <view class='cart-other'>
-                                    <text class='iconfont icon-edit' bindtap='toggleEditView' id='2'></text>
-                                    <text class='cart-num'>×1</text>
-                              </view>
-                        </view>
-                        <!--修改模块开始-->
-                        <view class='edit-box {{editView==2?"show":"hide"}}'>
-                              <view class='edit-block'>
-                                    <view class='edit-num'>
-                                          <button class='add'>
-                                                <text class='iconfont icon-tianjia'></text>
-                                          </button>
-                                          <input class='cart-input'></input>
-                                          <button class='minus'>
-                                                <text class='iconfont icon-jian'></text>
-                                          </button>
-                                    </view>
-                                    <view class='edit-specifications'>
-                                          <text class='edit-specifications-text'>三斤五两</text>
-                                          <text class='iconfont icon-xiangxia'></text>
-                                    </view>
-                              </view>
-                              <view class='edit-success'>
-                                    <button bindtap='toggleEditView' id='2'>完成</button>
-                              </view>
-                        </view>
-                        <!--修改模块结束-->
-                  </view>
-            </view>
-            <!--商品列表块结束-->
-
-
-
-
-            <view class='cart-item'>
-                  <view class='cart-bar'>
-                        <checkbox-group class='my-checkbox checkbox-style1'>
-                              <checkbox />
-                        </checkbox-group>
-                        <text class='iconfont icon-dianpu'></text>
-                        <text class='cart-shop-name'>山里来土猪</text>
-                        <text class='iconfont icon-qianwang'></text>
-                  </view>
-
-                  <view class='cart-info'>
-                        <checkbox-group class='my-checkbox checkbox-style2'>
-                              <checkbox />
-                        </checkbox-group>
-                        <image class='cart-img' src='../../style/img/dafdd95b-a.jpg'></image>
-                        <view class='cart-right'>
-                              <view class='cart-text'>
-                                    <view class='cart-title'>
-                                          <text class='goods-icon'>现售</text>
-                                          <text>胜多负少斯蒂芬斯蒂芬第三方撒防守</text>
-                                    </view>
-                                    <text class='cart-specifications'>3斤5两</text>
-                                    <text class='cart-price'>￥35</text>
-                              </view>
-                              <view class='cart-other'>
-                                    <text class='iconfont icon-edit'></text>
-                                    <text class='cart-num'>×1</text>
-                              </view>
-                        </view>
-
-                  </view>
-
-                  <view class='cart-info'>
-                        <checkbox-group class='my-checkbox checkbox-style2'>
-                              <checkbox />
-                        </checkbox-group>
-                        <image class='cart-img' src='../../style/img/dafdd95b-a.jpg'></image>
-                        <view class='cart-right'>
-                              <view class='cart-text'>
-                                    <view class='cart-title'>
-                                          <text class='goods-icon'>现售</text>
-                                          <text>胜多负少斯蒂芬斯蒂芬第三方撒防守</text>
-                                    </view>
-                                    <text class='cart-specifications'>3斤5两</text>
-                                    <text class='cart-price'>￥35</text>
-                              </view>
-                              <view class='cart-other'>
-                                    <text class='iconfont icon-edit'></text>
-                                    <text class='cart-num'>×1</text>
-                              </view>
-                        </view>
-                  </view>
-
+                    <!--购物车商品结束-->
 
             </view>
-
-
+            <!--商品列表块结束-->  
       </view>
       <!--购物车列表结束-->
       <!--结算条-->
@@ -179,14 +71,14 @@
       <view class='settlement-left'>
             <view class='check-all'>
             <label>
-            <checkbox-group class='my-checkbox checkbox-style1'>
-                        <checkbox />
+            <checkbox-group class='my-checkbox checkbox-style1' bindchange="allCheck">
+                        <checkbox checked='{{allCheck}}'/>
             </checkbox-group>
             <text>全选</text>
             </label>
             </view>
             <view class='total'>
-                  <text>合计：<text class='total-price'>￥100</text></text>
+                  <text>合计：<text class='total-price'>￥{{totalMoney}}</text></text>
             </view>
       </view>
        <view class='settlement-right'>
@@ -195,3 +87,4 @@
       </view>
       <!--结算条结束-->
 </view>
+ <include src="/pages/component/cartPrompt.wxml"/>

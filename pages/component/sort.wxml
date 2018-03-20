@@ -1,5 +1,5 @@
 <!--商品排序开始-->
-<view class='sort-content' style='top:{{searchTopDistance+40+"px!important"}}'>
+<view class='sort-content {{goodsList==""?"hide":""}}' style='top:{{searchTopDistance+40+"px!important"}}'>
             <view class='sort-box'>
                 <view class='sort-item' bindtap='showFilter'>
                     <text>{{filterName}}</text>
@@ -29,4 +29,5 @@
             <!--占位-->
             
  </view>
- <view class='occupy-view' style=''></view>
+ <view class='occupy-view {{goodsList==""?"hide":""}}' style=''></view>
+ <view class='occupy-view2 {{goodsList==""?"":"hide"}}' style=''></view>

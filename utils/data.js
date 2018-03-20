@@ -7,6 +7,19 @@ var addJsonProperty = function (jsonData) {
     }
     return arr;
 }
+//购物车添加新属性
+var addProperty = function (content) {
+    if (content.length != 0) {
+        for (var i = 0; i < content.length; i++) {
+            content[i].isShopCheck = false;
+            for (var j = 0; j < content[i].dataList.length; j++) {
+                content[i].dataList[j].isGoodsCheck = false;
+            }
+        }
+    }
+    return content;
+}
 module.exports = {
-    addJsonProperty: addJsonProperty
+    addJsonProperty: addJsonProperty,
+    addProperty: addProperty
 }

@@ -3,126 +3,47 @@
 <scroll-view bindscroll="scroll" style="height:100vh"  scroll-y bindscrolltolower="lower" class='scroll-box' scroll-into-view="content2">
 <include src="../../component/searchBar.wxml"/>
 <include src="../../component/sort.wxml"/>
+<!--历史记录开始-->
+        <view class='history-block {{goodsList==""&&focus&&historySearch!=""?"":"hide"}}'>
+            <view class='title'>
+                <text>历史搜索</text>
+                <text class='iconfont icon-lajitong' bindtap='delHistorySearch'></text>
+            </view>
+            <view class='search-sign'>
+                <view class='search-sign-item' bindtap='toHistory' bindlongpress='delSpecifyHistorySearch' id='{{index}}' wx:for="{{historySearch}}" wx:for-item="i">{{i}}</view>
+            </view>
+        </view>
+        <!--历史记录结束-->
 <view class='goods-list2'>
-    <view class='goods-item2'>
+    <view wx:for="{{goodsList}}" class='goods-item2'>
         <view class='img-top'>
-            <image src='http://image6.benlailife.com//ProductImages/000/000/356/074/big/365779e8-44e5-44cd-b724-57b4cfd1cb5e.jpg'></image>
+            <image src='{{item.goodsImg}}'></image>
         </view>
         <view class='goods-introduce'>
             <view class='goods-name'>
                 <text class='self'>自营</text>
-                蓝塘土猪土猪土猪土猪土猪猪土猪土猪土猪土猪猪土猪猪土猪土猪土猪土猪
+                {{item.goodsName}}
             </view>
             <view class='mode-address'>
             <view class='mode-box'>
-                <text class='mode'>现售</text>
-                <text class='mode'>预售</text>
-                <text class='mode'>团购</text>
+                <text class='mode {{item.selectTypeList=="1"||item.selectTypeList=="1,2"||item.selectTypeList=="1,2,3"||item.selectTypeList=="1,3"?"":"hide"}}'>现售</text>
+                <text class='mode {{item.selectTypeList=="2"||item.selectTypeList=="1,2"||item.selectTypeList=="1,2,3"||item.selectTypeList=="2,3"?"":"hide"}}'>预售</text>
+                <text class='mode {{item.selectTypeList=="3"||item.selectTypeList=="1,3"||item.selectTypeList=="1,2,3"||item.selectTypeList=="2,3"?"":"hide"}}'>团购</text>
              </view>
                 <text class='address'>河源</text>
             </view>
             <view class='price-sales'>
                 <text class='price-sgin'>￥</text>
-                <text class='price'>199</text>
-                <text class='sales'>100人付款</text>
+                <text class='price'>{{item.minPrice}}</text>
+                <text class='sales'>{{item.salesVolume}}人付款</text>
                 <view class='shop' bindtap='toShop'>
-                <text class='iconfont icon-dianpu'></text>
+                <text class='iconfont icon-dianpu' id='{{item.merchantId}}'></text>
                 </view>
                 
             </view>
         </view>
     </view>
 
-
-<view class='goods-item2'>
-        <view class='img-top'>
-            <image src='http://image7.benlailife.com/ProductImages/000/000/288/195/big/39b15072-0dc6-4a4f-98b1-eaa3057b7ce9.jpg'></image>
-        </view>
-        <view class='goods-introduce'>
-            <view class='goods-name'>
-                <text class='self'>自营</text>
-                蓝塘土猪土猪土猪土猪土猪猪土猪土猪土猪土猪猪土猪猪土猪土猪土猪土猪
-            </view>
-            <view class='mode-address'>
-            <view class='mode-box'>
-                <text class='mode'>现售</text>
-                <text class='mode'>预售</text>
-                <text class='mode'>团购</text>
-             </view>
-                <text class='address'>河源</text>
-            </view>
-            <view class='price-sales'>
-                <text class='price-sgin'>￥</text>
-                <text class='price'>199</text>
-                <text class='sales'>100人付款</text>
-                <view class='shop'>
-                <text class='iconfont icon-dianpu'></text>
-                </view>
-                
-            </view>
-        </view>
-    </view>
-
-
-    <view class='goods-item2'>
-        <view class='img-top'>
-            <image src='http://image7.benlailife.com/ProductImages/000/000/288/195/big/39b15072-0dc6-4a4f-98b1-eaa3057b7ce9.jpg'></image>
-        </view>
-        <view class='goods-introduce'>
-            <view class='goods-name'>
-                <text class='self'>自营</text>
-                猪土猪土猪土猪
-            </view>
-            <view class='mode-address'>
-            <view class='mode-box'>
-                <text class='mode'>现售</text>
-                <text class='mode'>预售</text>
-                <text class='mode'>团购</text>
-             </view>
-                <text class='address'>河源</text>
-            </view>
-            <view class='price-sales'>
-                <text class='price-sgin'>￥</text>
-                <text class='price'>199</text>
-                <text class='sales'>100人付款</text>
-                <view class='shop'>
-                <text class='iconfont icon-dianpu'></text>
-                </view>
-                
-            </view>
-        </view>
-    </view>
-
-    <view class='goods-item2'>
-        <view class='img-top'>
-            <image src='http://image7.benlailife.com/ProductImages/000/000/288/195/big/39b15072-0dc6-4a4f-98b1-eaa3057b7ce9.jpg'></image>
-        </view>
-        <view class='goods-introduce'>
-            <view class='goods-name'>
-                <text class='self'>自营</text>
-                蓝塘土猪土猪土猪土猪土猪猪土猪土猪土猪土猪猪土猪猪土猪土猪土猪土猪
-            </view>
-            <view class='mode-address'>
-            <view class='mode-box'>
-                <text class='mode'>现售</text>
-                <text class='mode'>预售</text>
-                <text class='mode'>团购</text>
-             </view>
-                <text class='address'>河源</text>
-            </view>
-            <view class='price-sales'>
-                <text class='price-sgin'>￥</text>
-                <text class='price'>199</text>
-                <text class='sales'>100人付款</text>
-                <view class='shop'>
-                <text class='iconfont icon-dianpu'></text>
-                </view>
-                
-            </view>
-        </view>
-    </view>
-   
-   
    
 </view>
  <!--底部加载-->

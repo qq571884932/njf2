@@ -1,13 +1,11 @@
 // pages/other/guideApp/guideApp.js
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
         url: "http://www.njf2016.com/exhibition/index.html"
     },
-
     /**
      * 生命周期函数--监听页面加载
      */

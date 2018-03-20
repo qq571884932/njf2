@@ -48,13 +48,8 @@
         "selectedIconPath": "style/img/icon-wodexuanzhong-a.png",
         "pagePath": "pages/my/my",
         "text": "我的"
-      },
-      {
-        "iconPath": "style/img/2.png",
-        "selectedIconPath": "style/img/2.png",
-        "pagePath": "pages/other/guideApp/guideApp",
-        "text": "可视商圈"
       }
     ]
   }
 }
+  

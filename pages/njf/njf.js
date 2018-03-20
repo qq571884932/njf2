@@ -1,4 +1,5 @@
 // pages/njf/njf.js
+var urltotal = getApp().urltotal();
 Page({
 
     /**
@@ -42,8 +43,8 @@ Page({
                 title: "资讯",
                 id: 7
             }, {
-                img: "http://www.njf2016.com/wx/img/type/8.png",
-                title: "可视商圈",
+                img: "http://www.njf2016.com/wx/img/type/cx1.gif",
+                title: "活动",
                 id: 8
             }],
         typeItem2: [
@@ -55,11 +56,14 @@ Page({
                 title: "农业资讯"
             }
         ],
-        address: "河源 坚基购物广场"
-
+        address: "河源 源城区",
+        prompt: 1,//1为显示底部加载，2为底部加载结束，3为提示什么都没找到
+        goodsList: [],
+        mX: 0,
+        mY: 0
     },
     scroll: function (event) {
-// console.log("dddd");
+        console.log(event.detail.scrollTop);
         if (this.data.scrollNum < event.detail.scrollTop) {
 
         } else {
@@ -78,6 +82,25 @@ Page({
         console.log("dddd");
     },
     toLocation: function () {
+        // 可以通过 wx.getSetting 先查询一下用户是否授权了 "scope.record" 这个 scope
+        wx.getSetting({
+            success(res) {
+                if (!res.authSetting['scope.userInfo']) {
+                    wx.authorize({
+                        scope: 'scope.userInfo',
+                        success(e) {
+                            // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+                            console.log(e)
+                        }
+                    })
+                }
+            }
+        })
+        wx.getUserInfo({
+            success: function (res) {
+                console.log(res)
+            }
+        })
         wx.login({
             success: function (res) {
                 if (res.code) {
@@ -113,6 +136,29 @@ Page({
             success: function (res) {
                 console.log(res)
                 that.setData({})
+                that.getAddress(res.latitude, res.longitude)
+            }
+        })
+    },
+    /**
+     * 获取地址
+     */
+    getAddress: function (latitude, longitude) {
+        this.getAd();
+        var that = this;
+        wx.request({
+            url: urltotal + 'other/getAddByLAL.do?log=' + longitude + '&lat=' + latitude, //仅为示例，并非真实的接口地址
+
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+                console.log(res)
+                var a = JSON.parse(res.data).addrList[0].admName;
+                console.log(JSON.parse(res.data))
+                that.setData({
+                    address: a.split(",")[1] + " " + a.split(",")[2]
+                })
             }
         })
     },
@@ -120,15 +166,18 @@ Page({
     跳转分类
     */
     onClassify: function (event) {
-        if (event.currentTarget.id == 8) {
+        if (event.currentTarget.id == 7 || event.currentTarget.id == 8) {
             var app = getApp();
             app.toApp();
-
             return;
         }
         wx.navigateTo({
             url: '../other/classify/classify?type=' + event.currentTarget.id,
         })
+    },
+    toApp: function () {
+        var app = getApp();
+        app.toApp()
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -136,14 +185,58 @@ Page({
     onReady: function () {
 
     },
-
+    /**
+     * typeID
+     */
+    getAd: function () {
+        wx.showNavigationBarLoading()
+        var that = this;
+        wx.request({
+            url: urltotal + 'adv/getAdv.do?typeID=1,2,6,7,8,9',
+            success: function (res) {
+                wx.hideNavigationBarLoading()
+                console.log(res.data);
+                that.setData({
+                    goodsList: res.data.content
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
 
     },
+    move: function (event) {
+        var that = this;
+        var x = 0, y = 0;
 
+        wx.getSystemInfo({
+            success: function (res) {
+                x = res.windowWidth - event.touches[0].clientX;
+                y = res.windowHeight - event.touches[0].clientY;
+                if (x > (res.windowWidth - 32)) {
+                    x = res.windowWidth - 32
+                }
+                if (x < 33) {
+                    x = 33
+                }
+                if (y > res.windowHeight - 32) {
+                    y = res.windowHeight - 32
+                }
+                if (y < 33) {
+                    y = 33;
+                }
+                that.setData({
+                    mX: x - 32,
+                    mY: y - 32
+                })
+
+            }
+        })
+
+    },
     /**
      * 生命周期函数--监听页面隐藏
      */

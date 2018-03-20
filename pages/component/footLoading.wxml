@@ -1,8 +1,16 @@
 <!--底部加载-->
-            <view class='bottom-load'>
+            <view class='bottom-load {{prompt==1?"":"hide"}}'>
                   <view class='load-block'>
                         <image src='http://www.njf2016.com/wx/img/njf.gif'></image>
                         <text>努力加载中…</text>
                   </view>
             </view>
-            <!--底部加载结束-->
+<!--底部加载结束-->
+            <view class='bottom-load {{prompt==2?"":"hide"}}'>
+                  
+                        <text class='bottom-load-text'>已经到低啦！</text>
+                  
+            </view>
+            <view class='bottom-load {{prompt==3?"":"hide"}}'>
+                 <text class='bottom-load-text'>啥都没有哦！</text>
+            </view>

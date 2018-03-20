@@ -17,9 +17,8 @@
         <!-- <button class='btn bg-1'>复制去浏览器粘贴</button> -->
     </view>
     <view class='footer'>
-    深圳艺购科技有限公司
+    深圳市艺购科技有限公司
     </view>
-    
 </view>
 <!-- <view class='video-view'>
 <video danmu-btn="{{true}}" class='video-item' 

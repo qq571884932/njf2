@@ -171,8 +171,14 @@ background: linear-gradient(to right, #21bd54, #238f46);
   text-align: center;
 }
 .cart-title{
+      overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
   margin-top: 10rpx;
-  display: block;
   width: 360rpx;
   height: 90rpx;
   font-size: 30rpx;
@@ -203,10 +209,14 @@ background: linear-gradient(to right, #21bd54, #238f46);
   color: #f9624e;
 }
 .cart-other .cart-num{
+    position: absolute;
+    right:15rpx;
+    bottom: 30rpx;
 display: block;
   font-size: 35rpx;
   line-height: 43rpx;
   color: #c0c0c0;
+
 }
 .cart-other .icon-edit{
   margin-top: 15rpx;
@@ -215,6 +225,27 @@ display: block;
   text-align: center;
   display: block;
   color: #000 !important;
+}
+.prompt{
+
+    float: left;
+    width: 80rpx;
+  height: 240rpx;
+display: block;
+overflow: hidden;
+line-height: 40rpx;
+font-size: 25rpx;
+text-align: center;
+}
+.prompt .invalid-prompt{
+margin-left: 5rpx;
+width: 60rpx;
+margin-top: 100rpx;
+text-align: center;
+padding: 0rpx 5rpx;
+background: #bbb;
+border-radius: 30rpx;
+color: #fff;
 }
 /*编辑控件*/
 .edit-box .edit-num{
@@ -334,4 +365,39 @@ button::after{
 }
 .total-price{
 color: #f9624e;
+}
+/* 未登录时提示 */
+.cart-prompt-block{
+   position:fixed;
+   margin:auto;
+   left:0; 
+   right:0; 
+   top:0; 
+   bottom:0;
+   width:600rpx; 
+   height:700rpx;
+   text-align: center;
+}
+.cart-prompt-img{
+      width: 200rpx;
+    height: 200rpx;
+    margin: 0 auto;
+}
+.cart-prompt-img image{
+    width: 200rpx;
+    height: 200rpx;
+    margin-left: -20rpx;
+}
+.cart-prompt-block text{
+    color: #999;
+    font-size: 30rpx;
+    line-height: 100rpx;
+}
+.cart-prompt-btn{
+    background: darkcyan;
+    padding: 0rpx 15rpx;
+    color: #ffffff;
+    border-radius: 0;
+    width: 120rpx;
+    font-size: 26rpx;
 }

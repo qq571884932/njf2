@@ -1,0 +1,9 @@
+<view class='content2' style='height:100vh'>
+<view class='cart-prompt-block'>
+    <view class='cart-prompt-img'>
+        <image src='/style/img/cart.png'></image>
+    </view>
+    <text>您还没登录，请登录后查看购物车</text>
+    <button class='cart-prompt-btn'>登 录</button>
+</view>
+</view>
