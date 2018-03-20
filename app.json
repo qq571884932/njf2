@@ -16,7 +16,6 @@
     "pages/other/address/addsite/addsite",
     "pages/other/order/order",
     "pages/login/WxAccredit/WxAccredit",
-    "pages/login/wxLogin/wxLogin",
     "pages/other/dingChuang/dingChuang",
     "pages/other/guideApp/guideApp"
   ],
